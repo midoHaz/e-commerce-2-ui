@@ -58,27 +58,30 @@ Widget SocialButton({
   required String? pathImage,
   required String? text,
 }) =>
-    FlatButton(
+    ElevatedButton(
       onPressed: () {},
-      padding: const EdgeInsets.all(10),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(radius!),
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.all(10),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(radius!),
+        ),
+        backgroundColor: color, // background color
       ),
-      color: color,
       child: Row(
-        children:
-        [
-          Image.asset(pathImage!,
+        children: [
+          Image.asset(
+            pathImage!,
             width: 35,
-            height: 35,),
+            height: 35,
+          ),
           const SizedBox(
             width: 45,
           ),
-           Text(
+          Text(
             text!,
             style: const TextStyle(
-                fontSize: 20,
-                color: Colors.grey
+              fontSize: 20,
+              color: Colors.grey,
             ),
           ),
         ],

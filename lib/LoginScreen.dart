@@ -82,7 +82,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SizedBox(
                             height: 20.0,
                           ),
-                          TextButton(onPressed: (){}, child:const Text('Forgot Password ?',style: TextStyle(fontSize: 13.0,color: Colors.blue),textAlign: TextAlign.right,),),
+                          TextButton(onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpScreen()));
+                          }, child:const Text('Forgot Password ?',style: TextStyle(fontSize: 13.0,color: Colors.blue),textAlign: TextAlign.right,),),
                           const SizedBox(
                             height: 20.0,
                           ),

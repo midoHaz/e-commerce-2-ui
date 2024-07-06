@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../HomeScreen.dart';
 import 'components.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -80,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               text: 'Sign up',
                               function:(){
                                 if(formKey.currentState!.validate()){
-
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
                                 }
                               }
                           )
